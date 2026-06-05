@@ -1,0 +1,120 @@
+/* Reset basic margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Overall page background (Deep dark red/brown) */
+body {
+    background-color: #3d110b; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main rounded application window with red glow effect */
+.store-container {
+    width: 100%;
+    max-width: 950px;
+    background-color: #6d4c41; /* Fallback base color */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(255, 20, 0, 0.4); /* Red outer glow */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+.store-header {
+    background-color: #694a43;
+    padding: 30px;
+    text-align: center;
+}
+
+.store-header h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Layout for sidebar and content side-by-side */
+.main-layout {
+    display: flex;
+    flex: 1;
+    min-height: 450px;
+}
+
+/* Sidebar Navigation container */
+.sidebar {
+    background-color: #72524a;
+    width: 25%;
+    padding: 20px 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+/* Individual Sidebar Menu Buttons */
+.nav-item {
+    display: block;
+    background-color: #f4eae6;
+    color: #000000;
+    text-decoration: none;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+/* Active State (Home button style) */
+.nav-item.active {
+    background-color: #8c736c;
+    color: #ffffff;
+}
+
+/* Main Text Content container */
+.content-area {
+    background-color: #7c706c;
+    width: 75%;
+    padding: 40px;
+    color: #ffffff;
+}
+
+.content-area h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.content-area p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Footer styling */
+.store-footer {
+    background-color: #e5cbc2;
+    padding: 20px;
+    text-align: center;
+}
+
+.store-footer p {
+    color: #333333;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjust for smaller screens */
+@media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    .sidebar, .content-area {
+        width: 100%;
+    }
+}
